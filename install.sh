@@ -20,7 +20,7 @@ else
 fi
 
 # link ~/.config/karabiner folder
-if [ -f ~/.config/karabiner ]
+if [ -d ~/.config/karabiner ]
 then
   if [ "`readlink ~/.config/karabiner`" != "`ls ~/.karabiner-config/karabiner`" ]
   then
