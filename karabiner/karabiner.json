@@ -16,6 +16,15 @@
                         "description": "Change command+w to option+delete",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.apple\\.Terminal$",
+                                            "^com\\.googlecode\\.iterm2$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "w",
                                     "modifiers": {
@@ -32,16 +41,7 @@
                                         ]
                                     }
                                 ],
-                                "type": "basic",
-                                "conditions": [
-                                  {
-                                    "type": "frontmost_application_unless",
-                                    "bundle_identifiers": [
-                                      "^com\\.apple\\.Terminal$",
-                                      "^com\\.googlecode\\.iterm2$"
-                                    ]
-                                  }
-                                ]
+                                "type": "basic"
                             }
                         ]
                     }
