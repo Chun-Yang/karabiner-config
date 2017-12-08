@@ -22,7 +22,7 @@ fi
 # link ~/.config/karabiner folder
 if [ -d ~/.config/karabiner ]
 then
-  if [ "`readlink ~/.config/karabiner`" != "`ls ~/.karabiner-config/karabiner`" ]
+  if [ "`readlink ~/.config/karabiner`" != "$HOME/.karabiner-config/karabiner" ]
   then
     echo "[INFO] existing ~/.config/karabiner file is moved to ~/.config/karabiner.backup"
     mv ~/.config/karabiner ~/.config/karabiner.backup
