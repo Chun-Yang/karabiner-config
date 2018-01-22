@@ -14,7 +14,7 @@
                 },
                 "rules": [
                     {
-                        "description": "Change command+w to option+delete",
+                        "description": "Change control+w to option+delete",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -47,7 +47,7 @@
                         ]
                     },
                     {
-                      "description": "Change command+n to down arrow",
+                      "description": "Change control+n to down arrow",
                       "manipulators": [
                         {
                           "conditions": [
@@ -77,7 +77,7 @@
                       ]
                     },
                     {
-                      "description": "Change command+p to up arrow",
+                      "description": "Change control+p to up arrow",
                       "manipulators": [
                         {
                           "conditions": [
@@ -105,6 +105,36 @@
                           "type": "basic"
                         }
                       ]
+                    },
+                    {
+                        "description": "Change control+[ to escape",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.apple\\.Terminal$",
+                                            "^com\\.googlecode\\.iterm2$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "[",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_control"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "escape"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
                     }
                 ]
             },
