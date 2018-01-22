@@ -120,7 +120,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "[",
+                                    "key_code": "open_bracket",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_control"
